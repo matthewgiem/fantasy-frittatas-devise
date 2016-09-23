@@ -1,0 +1,11 @@
+<h2>home page for post</h2>
+
+<ul>
+  <% @posts.each do |post| %>
+    <%= render "post", :post => post %>
+  <% end %>
+</ul>
+
+<hr>
+
+<%= link_to "New Post", new_post_path %>
