@@ -22,6 +22,7 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'simplecov', require: false
   gem 'capybara'
+  gem 'database_cleaner'
 end
 
 group :development do
