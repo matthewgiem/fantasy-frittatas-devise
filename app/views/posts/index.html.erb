@@ -1,6 +1,6 @@
 <h2>home page for post</h2>
 
-<ul>
+<ul id="posts_list">
   <% @posts.each do |post| %>
     <%= render "post", :post => post %>
   <% end %>
@@ -8,4 +8,4 @@
 
 <hr>
 
-<%= link_to "New Post", new_post_path %>
+<%= link_to "New Post", new_post_path, id: "new_post_link", remote: true%>
