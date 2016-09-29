@@ -2,3 +2,14 @@
 <h2>home page for singular post</h2>
 
 <%= @post.text %>
+<h2>comments</h2>
+<ol>
+  <% @comments.each do |comment| %>
+    <li>
+      <%= comment.text %>
+    </li>
+  <% end %>
+</ol>
+
+<p><%= link_to "back", posts_path %></p>
+<p><%= link_to "Add a comment", new_post_comment_path(@post) %></p>
