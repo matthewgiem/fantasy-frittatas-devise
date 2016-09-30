@@ -27,9 +27,9 @@ describe 'Posts' do
     user = FactoryGirl.create(:user)
     login_as(user)
     visit posts_path
-    save_and_open_screenshot
     click_on "New Post"
     fill_in "Text", :with => "something funny"
+    save_and_open_screenshot
     click_on "Create Post"
     expect(page).to have_content("something funny")
   end
