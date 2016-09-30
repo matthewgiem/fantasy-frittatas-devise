@@ -1,3 +1,3 @@
 <li>
-  <%= comment.text %> by: <%= comment.user.email%>
+  <%= comment.text %> by: <%= comment.user.email%> written at: <%= time_ago_in_words(comment.created_at) %>
 </li>
