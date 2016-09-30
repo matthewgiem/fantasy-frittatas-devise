@@ -23,6 +23,7 @@ class PostsController < ApplicationController
   end
 
   def show
+    # @old =  Time.now.minus_with_coercion(@comment.created_at)./60.round
     @comments = @post.comments
   end
 

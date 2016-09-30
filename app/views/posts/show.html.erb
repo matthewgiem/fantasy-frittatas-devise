@@ -5,9 +5,7 @@
 <h2>comments</h2>
 <ol>
   <% @comments.each do |comment| %>
-    <li>
-      <%= comment.text %>
-    </li>
+  <%= render "comments/comment", :comment => comment %>
   <% end %>
 </ol>
 
