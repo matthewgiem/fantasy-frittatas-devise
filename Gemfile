@@ -23,6 +23,7 @@ group :development, :test do
   gem 'simplecov', require: false
   gem 'capybara'
   gem 'database_cleaner'
+  gem 'poltergeist'
 end
 
 group :development do

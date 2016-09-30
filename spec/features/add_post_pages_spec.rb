@@ -22,4 +22,15 @@ describe 'Posts' do
     click_on "New Post"
     expect(page).to have_content 'Text'
   end
+
+  it "creates a new post and adds it to the list", js: true do
+    user = FactoryGirl.create(:user)
+    login_as(user)
+    visit posts_path
+    save_and_open_screenshot
+    click_on "New Post"
+    fill_in "Text", :with => "something funny"
+    click_on "Create Post"
+    expect(page).to have_content("something funny")
+  end
 end
