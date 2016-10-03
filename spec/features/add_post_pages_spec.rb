@@ -26,11 +26,11 @@ describe 'Posts' do
   it "creates a new post and adds it to the list", js: true do
     user = FactoryGirl.create(:user)
     login_as(user)
-    # visit posts_path
+    visit posts_path
     click_on "New Post"
     fill_in "Text", :with => "something funny"
-    save_and_open_screenshot
     click_on "Create Post"
+    save_and_open_screenshot
     expect(page).to have_content("something funny")
   end
 end
