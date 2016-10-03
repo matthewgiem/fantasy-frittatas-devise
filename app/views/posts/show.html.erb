@@ -4,8 +4,12 @@
 <%= @post.text %>
 <h2>comments</h2>
 <ol>
-  <% @comments.each do |comment| %>
-  <%= render "comments/comment", :comment => comment %>
+  <% if @comments.any? %>
+    <% @comments.each do |comment| %>
+      <%= render "comments/comment", :comment => comment %>
+    <% end %>
+  <% else %>
+    <p>be the first to comment</p>
   <% end %>
 </ol>
 
