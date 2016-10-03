@@ -1,5 +1,5 @@
 <%= form_for @post, remote: true do |f| %>
-<%= render "layouts/errors", :object => @post %>
+  <%= render "layouts/errors", :object => @post %>
   <%= f.label :text %>
   <%= f.text_field :text %><br>
   <%= f.submit id: "submit" %>
