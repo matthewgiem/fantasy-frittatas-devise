@@ -12,7 +12,8 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'devise'
 gem 'omniauth-yahoo'
-
+gem 'dotenv-rails'
+gem 'activerecord-session_store'
 
 group :development, :test do
   gem 'byebug', platform: :mri
