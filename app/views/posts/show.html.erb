@@ -14,4 +14,4 @@
 </ol>
 
 <p><%= link_to "back", posts_path %></p>
-<p><%= link_to "Add a comment", new_post_comment_path(@post) %></p>
+<p><%= link_to "Add a comment", new_post_comment_path(@post), id: "new_comment_link", remote: true %></p>
