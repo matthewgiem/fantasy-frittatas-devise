@@ -3,7 +3,7 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable,
-         :omniauthable, :omniauth_providers => [:strava]
+         :omniauthable, :omniauth_providers => [:yahoo]
 
   has_many :posts
   has_many :comments
@@ -17,10 +17,9 @@ class User < ApplicationRecord
 
   def self.new_with_session(params, session)
     super.tap do |user|
-      if data = session["devise.strava_data"] && session["devise.strava_data"]["extra"]["raw_info"]
+      if data = session["devise.yahoo_data"] && session["devise.yahoo_data"]["extra"]["raw_info"]
         user.email = data["email"] if user.email.blank?
       end
     end
   end
-
 end

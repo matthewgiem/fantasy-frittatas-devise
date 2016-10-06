@@ -247,7 +247,8 @@ Devise.setup do |config|
   # ==> OmniAuth
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
-  config.omniauth :strava, ENV['STRAVA_APP_ID'], ENV['STRAVA_APP_SECRET']
+  config.omniauth :yahoo, ENV['YAHOO_APP_ID'], ENV['YAHOO_APP_SECRET'], scope: "email"
+  # does the call back URL go here??? , callback_url: "CALLBACK_URL"
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
