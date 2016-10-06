@@ -21,10 +21,12 @@ class CommentsController < ApplicationController
       if @comment.save
         format.html { redirect_to post_path(@comment.post) }
         format.js
-        flash[:notice] = "Comment successfully added!"
+        # flash[:notice] = "Comment successfully added!"
       else
-        render :new
+        format.html { render :new }
+        format.html { render :errors }
       end
+    end
   end
 
   def edit

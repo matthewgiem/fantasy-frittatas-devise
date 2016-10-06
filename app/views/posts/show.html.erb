@@ -3,7 +3,7 @@
 
 <%= @post.text %>
 <h2>comments</h2>
-<ol>
+<ol id="comments_list">
   <% if @comments.any? %>
     <% @comments.each do |comment| %>
       <%= render "comments/comment", :comment => comment %>
